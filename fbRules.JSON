@@ -1,0 +1,28 @@
+{
+// Allow anyone to read data, but only authenticated content 
+// owners (or Mr Britton:mOXE9Ueh4ng4ssf048Vn4bn9dSU2) can make changes to their data
+  "rules": {
+    "users": {
+      "$uid": {
+        ".read": true,
+        // or ".read": "auth.uid !== null" for only authenticated users
+        ".write": "auth.uid === $uid || auth.uid === 'mOXE9Ueh4ng4ssf048Vn4bn9dSU2'"
+      }
+    }
+  }
+}
+
+
+
+
+
+{
+// Allow anyone to read data, but only authenticated content 
+// owners (or Mr Britton:mOXE9Ueh4ng4ssf048Vn4bn9dSU2) can make changes to their data
+  "rules": {
+
+        ".read": true,
+        ".write": true
+
+  }
+}
